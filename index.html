@@ -24,8 +24,8 @@
           <legend>Biodata Form</legend>
 
             <!---------------------------------- Name ---------------------------------->
-            <label for="fullname">Fullname:</label>
-            <input type="text" name="fullname" id="fullname" placeholder="Surname first" required  class="name">
+            <label for="name1">Fullname:</label>
+            <input type="text" name="name1" id="name1" placeholder="Surname first....." required  class="name1">
 
             <br>
             <br>
@@ -33,12 +33,13 @@
             <!--------------------------------- email ------------------------------>
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" required placeholder="Enter your email....." class="email">
+
             <br>
             <br>
 
             <!-------------------------------- Tel no ----------------------------->
-            <label for="tel">Phone Number:</label>
-            <input type="tel" name="tel" id="tel" placeholder="+234-00-0000-0000" class="tel" required>
+            <label for="tel1">Phone Number:</label>
+            <input type="tel" name="tel1" id="tel1" placeholder="+234-00-0000-0000" class="tel1">
 
             <br>
             <br>
@@ -73,33 +74,38 @@
   <!----------------------------------------- Javascript --------------------------------------------->
   <script type="text/javascript">
 
-     const text = document.getElementsByClassName('name')[0];
+    const text = document.getElementsByClassName('name1')[0];
 
-     const email = document.getElementsByClassName('email')[0];
+    const email = document.getElementsByClassName('email')[0];
 
-     const tel = document.getElementsByClassName('tel')[0];
+    const tel = document.getElementsByClassName('tel1')[0];
     
     const hide = document.getElementsByClassName('successful')[0];
 
-     const male = document.getElementsByClassName('male')[0];
+    const male = document.getElementsByClassName('male')[0];
 
-     const female = document.getElementsByClassName('female')[0];
+    const female = document.getElementsByClassName('female')[0];
 
-     const password = document.getElementsByClassName('password')[0];
+    const password = document.getElementsByClassName('password')[0];
    
-     const btn = document.getElementsByClassName('btn')[0];
+    const btn = document.getElementsByClassName('btn')[0];
       
-     btn.addEventListener('click', function(event)
-     {
+    btn.addEventListener('click', function(event)
+    {
        event.preventDefault()
 
-        
-        if (email.value.length == 0)
+       if (name1.value.length == 0)
+        { 
+            alert("name field can't be empty");  	
+        } 
+
+
+        else if (email.value.length == 0)
         { 
             alert("email field can't be empty");  	
         }
 
-        else if (tel.value.length == 0)
+        else if (tel1.value.length == 0)
         { 
           alert("Tel field can't be empty");  	
         }
@@ -109,7 +115,7 @@
           alert("password field can't be empty");  	
         }
 
-        if(text.value != '' && email.value != '' && tel.value != '')
+        if(text.value != '' && email.value != '' && tel1.value != '' && password.value != '')
         {
           hide.classList.add('show')
         }
@@ -121,10 +127,10 @@
           email.value = ''
           male.value = ''
           female.value = ''
-          tel.clear();
+          tel1.value = ''
           password.value = '' 
        }, 4000)
-      })
+    })
       
   </script>
 

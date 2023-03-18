@@ -16,6 +16,11 @@ main {
   background-color: white;
 }
 
+main h2{
+  padding-bottom: 20px;
+  
+}
+
 .successful {
   display: none;
   margin: 10px 0 10px 0;
@@ -35,7 +40,7 @@ main {
 fieldset {
   margin-top: 1em;
   padding: 1em;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 input[type="text"],
@@ -67,6 +72,7 @@ input[type="submit"] {
 input[value="Submit"]{
   font-size: 1em;
   font-weight: 400;
+  
 }
 
 .sex{
