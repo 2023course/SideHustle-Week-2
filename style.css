@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(241, 243, 247);
+}
+
+main {
+  margin: 2em auto;
+  padding: 2em;
+  max-width: 30em;
+  background-color: white;
+}
+
+.successful {
+  display: none;
+  margin: 10px 0 10px 0;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(99,176,205)
+}
+
+.successful.show{
+  display: block;
+  margin: 10px 0 10px 0;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(99,176,205)
+}
+
+fieldset {
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"]
+{
+  transition: width 0.4s ease-in-out;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+input[type="submit"] {
+  background-color: rgb(99,176,205);
+  color: white;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+input[value="Submit"]{
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.sex{
+  padding-bottom: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color:rgb(72, 134, 204);
+}

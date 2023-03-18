@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css">
+    <title>SideHustle Week 2</title>
+  </head>
+
+
+  <body>
+    <main>
+
+      <h2>Fill in Your BioData</h2>
+
+      <div class="successful ">Form Submitted Succefully</div>
+
+      <form action="#" >
+
+        <fieldset>
+
+          <legend>Biodata Form</legend>
+
+            <!---------------------------------- Name ---------------------------------->
+            <label for="fullname">Fullname:</label>
+            <input type="text" name="fullname" id="fullname" placeholder="Surname first" required  class="name">
+
+            <br>
+            <br>
+
+            <!--------------------------------- email ------------------------------>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required placeholder="Enter your email....." class="email">
+            <br>
+            <br>
+
+            <!-------------------------------- Tel no ----------------------------->
+            <label for="tel">Phone Number:</label>
+            <input type="tel" name="tel" id="tel" placeholder="+234-00-0000-0000" class="tel" required>
+
+            <br>
+            <br>
+  
+            <!------------------------------- Gender --------------------------------->
+
+            <!------------------------------- Male --------------------------------->
+            <h4 class="sex">Gender:</h4>
+            <label for="gender">Male</label>
+            <input type="radio" name="gender" value="male" id="male" required checked class="male">  <!---->
+            <!------------------------------- Female --------------------------------->
+            <label for="gender">Female</label>
+             <input type="radio" name="gender" value="female" id="female" class="female"> <!----> 
+
+            <br>
+            <br>
+
+            <!------------------------------- Password ------------------------------>
+            <label for="tel">Password:</label>
+            <input type="password" name="password" id="password" required class="password">
+
+            <br>
+            <br>
+
+            <input type="submit" value="Submit" class="btn">
+
+        </fieldset>
+      </form>
+    </main>
+  </body>
+
+  <!----------------------------------------- Javascript --------------------------------------------->
+  <script type="text/javascript">
+
+     const text = document.getElementsByClassName('name')[0];
+
+     const email = document.getElementsByClassName('email')[0];
+
+     const tel = document.getElementsByClassName('tel')[0];
+    
+    const hide = document.getElementsByClassName('successful')[0];
+
+     const male = document.getElementsByClassName('male')[0];
+
+     const female = document.getElementsByClassName('female')[0];
+
+     const password = document.getElementsByClassName('password')[0];
+   
+     const btn = document.getElementsByClassName('btn')[0];
+      
+     btn.addEventListener('click', function(event)
+     {
+       event.preventDefault()
+
+        
+        if (email.value.length == 0)
+        { 
+            alert("email field can't be empty");  	
+        }
+
+        else if (tel.value.length == 0)
+        { 
+          alert("Tel field can't be empty");  	
+        }
+
+        else if (password.value.length == 0)
+        { 
+          alert("password field can't be empty");  	
+        }
+
+        if(text.value != '' && email.value != '' && tel.value != '')
+        {
+          hide.classList.add('show')
+        }
+        
+        setTimeout(()=>
+        {
+          hide.classList.remove('show')
+          text.value = ''
+          email.value = ''
+          male.value = ''
+          female.value = ''
+          tel.clear();
+          password.value = '' 
+       }, 4000)
+      })
+      
+  </script>
+
+</html>
